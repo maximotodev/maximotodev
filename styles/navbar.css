@@ -1,0 +1,37 @@
+.MuiMenu-paper,
+.MuiPopover-paper {
+  background-color: var(--cardBgColor) !important;
+  /* left: 16px !important;
+  right: 0 !important; */
+  /* right: 16px !important; */
+  min-width: 300px !important;
+}
+
+#menu-appbar {
+  top: -5px !important;
+}
+
+/* #menu-appbar .MuiMenu-paper {
+  box-shadow: none;
+} */
+
+.MuiButton-root {
+  text-transform: none;
+}
+
+@media (max-width: 500px) {
+  .MuiMenu-paper,
+  .MuiPopover-paper {
+    left: 16px !important;
+    right: 16px !important;
+  }
+  #menu-appbar {
+    top: -10px !important;
+  }
+}
+
+@media (max-width: 349px) {
+  .brand .portfolio {
+    display: none;
+  }
+}

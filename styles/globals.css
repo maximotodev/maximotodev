@@ -1,0 +1,260 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap");
+
+[data-theme="light"],
+[data-theme="light"] body {
+  /* dark scheme */
+  /* --primaryColor: #ff9c38;
+  --primaryColorOp: #ff9c3880; */
+
+  --primaryColor: #ff6600;
+  --primaryColorOp: rgba(255, 102, 0, 0.487);
+  --numberColor: #333;
+  --foregroundColor: #000000c7;
+  --backgroundColor: rgb(214, 219, 220);
+  --backgroundColorRgb: 214, 219, 220;
+
+  --tile-startColor: 239, 245, 249;
+  --tile-endColor: 228, 232, 233;
+  --tile-border: conic-gradient(
+    #00000080,
+    #00000040,
+    #00000030,
+    #00000020,
+    #00000010,
+    #00000010,
+    #00000080
+  );
+
+  --calloutColor: 238, 240, 241;
+  --callout-borderColor: 172, 175, 176;
+  --cardBgColor: #f2f2f2;
+  --card-borderColor: 131, 134, 135;
+
+  .text-on-back {
+    color: rgba(0, 0, 0, 0.05);
+  }
+
+  .bg-content {
+    opacity: 0.02;
+    filter: invert(100%);
+  }
+}
+
+[data-theme="dark"],
+[data-theme="dark"] body {
+  --primaryColor: #ff9c38;
+  --primaryColorOp: #ff9c3880;
+
+  --numberColor: #525f7f;
+  --foregroundColor: #e5e5e5c9;
+  --backgroundColor: #171941;
+  --backgroundColorRgb: 51, 51, 51;
+
+  --tile-startColor: 2, 13, 46;
+  --tile-endColor: 2, 5, 19;
+  --tile-border: conic-gradient(
+    #ffffff80,
+    #ffffff40,
+    #ffffff30,
+    #ffffff20,
+    #ffffff10,
+    #ffffff10,
+    #ffffff80
+  );
+
+  --calloutColor: 20, 20, 20;
+  --callout-borderColor: 108, 108, 108;
+  --cardBgColor: #1f2251;
+  --card-borderColor: 200, 200, 200;
+
+  .text-on-back {
+    color: rgba(255, 255, 255, 0.1);
+  }
+
+  .bg-content {
+    opacity: 0.02;
+    filter: invert(0);
+  }
+}
+
+:root {
+  --max-width: 1100px;
+  --border-radius: 12px;
+  --font-mono: ui-monospace, Menlo, Monaco, "Cascadia Mono", "Segoe UI Mono",
+    "Roboto Mono", "Oxygen Mono", "Ubuntu Monospace", "Source Code Pro",
+    "Fira Mono", "Droid Sans Mono", "Courier New", monospace;
+}
+
+/* @media (prefers-color-scheme: dark) {
+  :root {
+    --primaryColor: #ff9c38;
+    --primaryColorOp: #ff9c3880;
+
+    --numberColor: #525f7f;
+    --foregroundColor: #e5e5e5c9;
+    --backgroundColor: #171941;
+    --backgroundColorRgb: 51, 51, 51;
+
+    --tile-startColor: 2, 13, 46;
+    --tile-endColor: 2, 5, 19;
+    --tile-border: conic-gradient(
+      #ffffff80,
+      #ffffff40,
+      #ffffff30,
+      #ffffff20,
+      #ffffff10,
+      #ffffff10,
+      #ffffff80
+    );
+
+    --calloutColor: 20, 20, 20;
+    --callout-borderColor: 108, 108, 108;
+    --cardBgColor: #1f2251;
+    --card-borderColor: 200, 200, 200;
+  }
+
+  .text-on-back {
+    color: rgba(255, 255, 255, 0.1);
+  }
+
+  .bg-content {
+    opacity: 0.02;
+    filter: invert(0);
+  }
+} */
+
+/* @media (prefers-color-scheme: dark) {
+  html {
+    color-scheme: dark;
+  }
+} */
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: "Poppins", sans-serif !important;
+}
+
+html,
+body {
+  max-width: 100vw;
+}
+
+body {
+  overflow-x: hidden !important;
+  font-family: "INter", sans-serif;
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: var(--foregroundColor);
+  background: var(--backgroundColor);
+  background-image: url("../assets/images/bodyBg.png");
+  background-size: contain;
+  overflow-x: hidden !important;
+}
+
+svg {
+  color: var(--foregroundColor);
+}
+
+hr {
+  box-sizing: content-box;
+  height: 0;
+  overflow: visible;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+}
+
+p {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+a {
+  color: var(--foregroundColor);
+  text-decoration: none;
+  transition: 0.3s;
+}
+a:hover {
+  transition: 0.3s;
+  transform: translateY(-2px);
+  opacity: 0.8;
+}
+
+.textP {
+  color: var(--primaryColor);
+}
+.textPOP {
+  color: var(--primaryColorOp);
+}
+.textPOP:hover {
+  color: var(--primaryColor);
+}
+
+/* ============ banner ============= */
+
+.section-title {
+  position: absolute;
+  top: 110px;
+  left: 50px;
+  font-size: 2.0625rem;
+  font-weight: 400;
+  text-wrap: nowrap;
+}
+
+.text-on-back {
+  position: relative;
+  z-index: 1;
+  font-size: 9.5em;
+  margin-left: -4px;
+  font-weight: 900;
+}
+
+.section-description {
+  margin-top: -30px;
+  font-size: 0.875rem;
+  line-height: 26px;
+}
+
+.bg-content {
+  position: absolute;
+  top: -100px;
+  overflow: hidden !important;
+}
+
+.banner-section .bg-content {
+  right: -110px;
+  top: 10px;
+  /* transform: rotate(15deg); */
+}
+
+@media (max-width: 344px) {
+  .section-title {
+    font-size: 1.85rem;
+  }
+  .text-on-back {
+    font-size: 9.3em;
+  }
+}
+@media (max-width: 320px) {
+  .section-title {
+    font-size: 1.5rem;
+  }
+  .text-on-back {
+    font-size: 8.95em;
+  }
+}
+
+.MuiButton-root.MuiButton-outlined {
+  color: var(--primaryColor);
+  border-color: var(--primaryColor);
+}
