@@ -39,11 +39,11 @@ export const projectData = [
 
 export const projectInfo = {
   title: "Projects",
-  number: "02",
+  number: "II",
   description: (
     <>
-      I have worked and participated on many projects: personal, freelance,
-      enterprise and academic. The recents projects are listed below and others
+      I have worked and participated on many projects: personal, freelance and
+      enterprise. The recents projects are listed below and others
       can be found on my{" "}
       <Link href={socialLinks.github.link} target="_blank" className="textP">
         {socialLinks.github.name}
@@ -53,9 +53,9 @@ export const projectInfo = {
         {socialLinks.gitlab.name}
       </Link>{" "}
       accounts.{" "}
-      <span style={{ fontStyle: "italic" }}>
+      {/* <span style={{ fontStyle: "italic" }}>
         (Unfortunately, several enterprise projects are in private mode)
-      </span>
+      </span> */}
     </>
   ),
 };

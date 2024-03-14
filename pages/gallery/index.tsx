@@ -1,7 +1,10 @@
 import { Container, Toolbar } from "@mui/material";
+import SectionTitle from "@/SectionTitle";
 
 const gallery = () => {
   return (
+    <>
+    <SectionTitle title="Gallery" number="III" description={<></>} />
   <Container>
   <Toolbar
     sx={{
@@ -26,7 +29,9 @@ const gallery = () => {
       </Button>
     </Link> */}
   </Toolbar>
-</Container>)
+</Container>
+    </>
+    )
 };
 
 export default gallery;

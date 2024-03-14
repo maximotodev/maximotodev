@@ -35,6 +35,7 @@ const socialsGit = [
 ];
 
 const recentsProjects = projectData.slice(0, 5);
+// console.log(recentsProjects)
 
 const ProjectsSection = () => {
   return (

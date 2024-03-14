@@ -258,7 +258,7 @@ const other = [
 
 export const skillsData = {
   title: "Skills/Stack",
-  number: "03",
+  number: "IV",
   description: (
     <>
       I use many technologies and tools to build professional applications and

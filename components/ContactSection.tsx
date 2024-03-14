@@ -31,7 +31,7 @@ const ContactSection = () => {
             top: { md: -100 },
           }}
         >
-          <SectionTitle title="Contact" number="04" description={<></>} />
+          <SectionTitle title="Contact" number="V" description={<></>} />
           <ContactForm />
         </Grid>
         <Grid
