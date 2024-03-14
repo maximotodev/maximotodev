@@ -41,8 +41,7 @@ const SkillsSection = () => {
           <SectionTitle
             title={skillsData.title}
             number={skillsData.number}
-            // description={skillsData.description}
-            description={<></>}
+            description={<>{skillsData.description}</>}
           />
           {skillsData.stack.map((stack, key) => (
             <Accordion

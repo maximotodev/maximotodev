@@ -2,6 +2,8 @@ import { useTheme } from "@/hooks/use_theme";
 import {
   AccountCircleOutlined,
   Close,
+  ContactMail,
+  ContactMailRounded,
   DarkMode,
   DataArray,
   DataObject,
@@ -59,6 +61,12 @@ const pages = [
     name: "Skills",
     href: "/skills",
     icon: <DataArray />,
+  },
+  {
+    id: 5,
+    name: "Contact",
+    href: "/contact",
+    icon: <ContactMail />,
   },
 ];
 
