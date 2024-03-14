@@ -2,17 +2,19 @@
 import { TypeAnimation } from 'react-type-animation';
 import { RemoveRedEyeOutlined } from "@mui/icons-material";
 import { Button, Container, Toolbar } from "@mui/material";
+import Image from 'next/image';
 import Head from "next/head";
 import Link from "next/link";
 import { aboutInfo } from "@/data/aboutData";
+import heroImg from '@/assets/images/hero-img.png';
 
 export default function Home() {
   return (
     <>
       {/* DEV INDICATION */}
       <Container>
-  <Toolbar
-    sx={{
+   <Toolbar
+      sx={{
       display: "flex",
       flexDirection: "column",
       backgroundColor: "var(--cardBgColor)",
@@ -23,6 +25,12 @@ export default function Home() {
       textAlign: "center",
     }}
   >
+    <Image 
+      className="hero-img" 
+      src={heroImg} 
+      alt="Maximoto hero image"
+      width={200}
+    />
     <TypeAnimation
           wrapper='div'
           className="typing-animation"
