@@ -27,7 +27,7 @@ const Footer = () => {
         >
           <div>
             <h4 style={{ opacity: 0.7, fontWeight: "lighter" }}>
-              Made with 🧡 2023 &copy;
+              Made with 🧡 2024 &copy;
             </h4>
             <Box
               sx={{
