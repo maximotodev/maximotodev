@@ -1,18 +1,26 @@
 import { Box, Button, TextField } from "@mui/material";
 import React, { FormEvent } from "react";
+import { string } from "zod";
 
+async function onSubmit(event: FormEvent<HTMLFormElement>) {
+  event.preventDefault()
+
+  const formData = new FormData(event.currentTarget)
+  const response = await fetch('/api/submit', {
+    method: 'POST',
+    body: formData,
+  })
+  console.log(formData)
+};
 const ContactForm = () => {
+  
   const [loading, setLoading] = React.useState<boolean>(false);
   const [formData, setFormData] = React.useState({
-    name: "",
-    email: "",
-    subject: "",
-    message: "",
+    name: '',
+    email: '',
+    message: '',
   });
-  const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
-    event.preventDefault();
-    console.log(formData);
-  };
+
   return (
     <Box
       sx={{
@@ -34,8 +42,9 @@ const ContactForm = () => {
         pr: { md: 5 },
       }}
     >
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={onSubmit}>
         <TextField
+          required
           type="text"
           label="Name"
           placeholder="Enter your name"
@@ -46,6 +55,7 @@ const ContactForm = () => {
           onChange={(e) => setFormData({ ...formData, name: e.target.value })}
         />
         <TextField
+          required
           type="email"
           label="Email"
           placeholder="Enter your email"
@@ -55,7 +65,7 @@ const ContactForm = () => {
           value={formData.email}
           onChange={(e) => setFormData({ ...formData, email: e.target.value })}
         />
-        <TextField
+        {/* <TextField
           type="text"
           label="Subject"
           size="small"
@@ -68,8 +78,9 @@ const ContactForm = () => {
               subject: e.target.value,
             })
           }
-        />
+        /> */}
         <TextField
+          required
           type="text"
           label="Message"
           size="small"

@@ -1,4 +1,5 @@
 import { useRouter } from "next/router";
+import { projectData } from "@/data/projectData";
 
 const Project = () => {
   const router = useRouter();

@@ -13,7 +13,7 @@ import Link from "next/link";
 
 import profilePic from "@/assets/images/profilePic.jpeg";
 import Image from "next/image";
-import SectionTilte from "../SectionTitle";
+import SectionTilte from "./SectionTitle";
 import { gitlabIcon, socialLinks } from "@/utils/variables";
 import { projectData, projectInfo } from "@/data/projectData";
 

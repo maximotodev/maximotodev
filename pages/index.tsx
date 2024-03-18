@@ -30,10 +30,10 @@ export default function Home() {
       src={heroImg} 
       alt="Maximoto hero image"
       width={200}
+      priority
     />
     <TypeAnimation
           wrapper='div'
-          className="typing-animation"
           sequence={[
           // Same substring at the start will only be typed once, initially
           'Hi, I am Maximoto 👋, a software developer',

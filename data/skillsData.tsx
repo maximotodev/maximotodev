@@ -21,6 +21,7 @@ import {
   siMysql,
   siNextdotjs,
   siNginx,
+  siNodedotjs,
   siPostgresql,
   siPython,
   siReact,
@@ -52,19 +53,19 @@ const backend = [
     img: "",
   },
   {
-    name: "django",
-    icon: getIcons([siDjango]),
+    name: "nodejs",
+    icon: getIcons([siNodedotjs]),
     dot: "#fff",
     starred: false,
     img: "",
   },
-  {
-    name: "Django rest",
-    icon: getIcons([siDjango]),
-    dot: "#fff",
-    starred: false,
-    img: drfImg,
-  },
+  // {
+  //   name: "Django rest",
+  //   icon: getIcons([siDjango]),
+  //   dot: "#fff",
+  //   starred: false,
+  //   img: drfImg,
+  // },
   {
     name: "Redis",
     icon: getIcons([siRedis]),
@@ -74,13 +75,13 @@ const backend = [
   },
 ];
 const frontend = [
-  {
-    name: "Flutter Dart",
-    icon: getIcons([siFlutter]),
-    dot: "#fff",
-    starred: false,
-    img: "",
-  },
+  // {
+  //   name: "Flutter Dart",
+  //   icon: getIcons([siFlutter]),
+  //   dot: "#fff",
+  //   starred: false,
+  //   img: "",
+  // },
   {
     name: "ReactJS",
     icon: getIcons([siReact]),
@@ -138,13 +139,13 @@ const frontend = [
     starred: false,
     img: "",
   },
-  {
-    name: "photoshop",
-    icon: getIcons([siAdobephotoshop]),
-    dot: "#fff",
-    starred: false,
-    img: "",
-  },
+  // {
+  //   name: "photoshop",
+  //   icon: getIcons([siAdobephotoshop]),
+  //   dot: "#fff",
+  //   starred: false,
+  //   img: "",
+  // },
   {
     name: "illustrator",
     icon: getIcons([siAdobeillustrator]),
@@ -219,20 +220,20 @@ const other = [
     starred: false,
     img: "",
   },
-  {
-    name: "jira",
-    icon: getIcons([siJira]),
-    dot: "#fff",
-    starred: false,
-    img: "",
-  },
-  {
-    name: "Trello",
-    icon: getIcons([siTrello]),
-    dot: "#fff",
-    starred: false,
-    img: "",
-  },
+  // {
+  //   name: "jira",
+  //   icon: getIcons([siJira]),
+  //   dot: "#fff",
+  //   starred: false,
+  //   img: "",
+  // },
+  // {
+  //   name: "Trello",
+  //   icon: getIcons([siTrello]),
+  //   dot: "#fff",
+  //   starred: false,
+  //   img: "",
+  // },
   {
     name: "github",
     icon: getIcons([siGithub]),
@@ -261,7 +262,7 @@ export const skillsData = {
   number: "IV",
   description: (
     <>
-      I use many technologies and tools to build professional applications and
+      I use the technologies and frameworks listed below to build professional applications and
       mockups.
     </>
   ),

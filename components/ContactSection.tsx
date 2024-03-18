@@ -1,5 +1,5 @@
 import { Box, Button, Divider, Grid, TextField } from "@mui/material";
-import SectionTitle from "../SectionTitle";
+import SectionTitle from "./SectionTitle";
 import React from "react";
 import { EmailOutlined, PhoneAndroid, WhatsApp } from "@mui/icons-material";
 import Link from "next/link";
@@ -31,7 +31,7 @@ const ContactSection = () => {
             top: { md: -100 },
           }}
         >
-          <SectionTitle title="Contact" number="V" description={<></>} />
+          <SectionTitle title="Contact" number="V" description={<>Shoot me a message</>} />
           <ContactForm />
         </Grid>
         <Grid

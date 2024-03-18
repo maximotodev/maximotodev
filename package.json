@@ -20,7 +20,8 @@
     "react-dom": "^18",
     "react-icon-cloud": "^4.1.4",
     "react-type-animation": "^3.2.0",
-    "simple-icons": "^9.19.0"
+    "simple-icons": "^9.19.0",
+    "zod": "^3.22.4"
   },
   "devDependencies": {
     "@types/node": "^20",

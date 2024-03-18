@@ -6,7 +6,7 @@ import {
   Grid,
   Typography,
 } from "@mui/material";
-import SectionTitle from "../SectionTitle";
+import SectionTitle from "./SectionTitle";
 import Skill_cloud from "./Skill_cloud";
 import { skillsData } from "@/data/skillsData";
 import { ExpandMore } from "@mui/icons-material";

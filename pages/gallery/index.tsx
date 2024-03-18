@@ -1,10 +1,10 @@
 import { Container, Toolbar } from "@mui/material";
-import SectionTitle from "@/SectionTitle";
+import SectionTitle from "@/components/SectionTitle";
 
 const gallery = () => {
   return (
     <>
-    <SectionTitle title="Gallery" number="III" description={<></>} />
+  <SectionTitle title="Gallery" number="III" description={<></>} />
   <Container>
   <Toolbar
     sx={{

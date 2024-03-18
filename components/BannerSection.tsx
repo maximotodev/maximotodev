@@ -2,7 +2,7 @@ import { Avatar, Box, Grid, IconButton, Tooltip } from "@mui/material";
 import bgContent from "@/assets/images/bgContent.png";
 import Image from "next/image";
 import Experiences from "./Experiences";
-import SectionTitle from "../SectionTitle";
+import SectionTitle from "./SectionTitle";
 import { aboutInfo } from "@/data/aboutData";
 
 const BannerSection = () => {

@@ -16,15 +16,7 @@ export const aboutInfo = {
   name: "Maximoto",
   description: (
     <>
-      {/* <span style={{ textTransform: "uppercase", fontWeight: 700 }}>
-        {" "}
-        You can call me <span className="textP">TOM</span>
-      </span>{" "}
-      <br /> */}
       I am a fullstack developer and bitcoin maximalist. I like to work with software and computers.
-      {/* <span style={{ textTransform: "uppercase", fontWeight: 600 }}>
-        Based in Yaoundé, Available for Freelance Projects.
-      </span> */}
     </>
   ),
   socials: [
@@ -78,13 +70,6 @@ export const experiences = [
         dec: (
           <>
             Web app developer.
-            {/* <Link
-              style={{ textDecoration: "underline" }}
-              className="textPOP"
-              href="/projects#services"
-            >
-              Services
-            </Link> */}
           </>
         ),
       },
@@ -109,13 +94,6 @@ export const experiences = [
         dec: (
           <>
             Web/Mobile App, UI Design & API.
-            {/* <Link
-              style={{ textDecoration: "underline" }}
-              className="textPOP"
-              href="/about#services"
-            >
-              Services
-            </Link> */}
           </>
         ),
       },
@@ -130,16 +108,7 @@ export const experiences = [
         title: "HarvardX's Computer Science for Web Programming",
         dec: (
           <>
-            Software Engineering & Algorithms at CS50's Introduction to Computer Science
-            {/* <Link
-              href={experienceLinks.kelden.link}
-              target="_blank"
-              style={{ textDecoration: "underline" }}
-              className="textPOP"
-            >
-              {experienceLinks.kelden.name}
-            </Link>{" "} */}
-            .
+            Software Engineering & Algorithms at CS50's Introduction to Computer Science.
           </>
         ),
       },
@@ -148,16 +117,7 @@ export const experiences = [
         title: "Fullstack Developer",
         dec: (
           <>
-            At{" "}TBA 
-            {/* <Link
-              style={{ textDecoration: "underline" }}
-              className="textPOP"
-              href={experienceLinks.ubora.link}
-              target="_blank"
-            >
-              {experienceLinks.ubora.name}
-            </Link>{" "}
-            startup. */}
+            At{" "}TBA
           </>
         ),
       },
@@ -167,13 +127,6 @@ export const experiences = [
         dec: (
           <>
             Professional Web/Mobile App, UI Design.
-            {/* <a
-              style={{ textDecoration: "underline" }}
-              className="textPOP"
-              href="/about"
-            >
-              Services
-            </a> */}
           </>
         ),
       },
