@@ -1,25 +1,50 @@
 import { Box, Button, TextField } from "@mui/material";
-import React, { FormEvent } from "react";
-import { string } from "zod";
+import { FormEvent, useState } from "react";
 
-async function onSubmit(event: FormEvent<HTMLFormElement>) {
-  event.preventDefault()
-
-  const formData = new FormData(event.currentTarget)
-  const response = await fetch('/api/submit', {
-    method: 'POST',
-    body: formData,
-  })
-  console.log(formData)
+const initialValues = {
+  name: '',
+  email: '',
+  message: '',
 };
+
 const ContactForm = () => {
-  
-  const [loading, setLoading] = React.useState<boolean>(false);
-  const [formData, setFormData] = React.useState({
-    name: '',
-    email: '',
-    message: '',
-  });
+  const [isLoading, setIsLoading] = useState<boolean>(false)
+  const [error, setError] = useState<string | null>(null)
+  const [values, setValues] = useState(initialValues);
+
+  const handleInputChange = (event: { target: { name: string; value: string; }; }) => {
+    const { name, value } = event.target;
+    setValues({
+      ...values,
+      [name]: value,
+    });
+  };
+
+  async function handleSubmit(event: FormEvent<HTMLFormElement>) {
+    event.preventDefault()
+    setIsLoading(true)
+    setError(null) // Clear previous errors when a new request starts
+    try {
+      const formData = new FormData(event.currentTarget)
+      const response = await fetch('/api/submit', {
+        method: 'POST',
+        body: formData,
+      })
+ 
+      if (!response.ok) {
+        throw new Error('Failed to submit the data. Please try again.')
+      }
+      // Handle response if necessary
+      const data = await response.json()
+      console.log(data)
+    } catch (error) {
+            // Handle error if necessary
+      console.error(error)
+    } finally {
+      setIsLoading(false)
+
+    }
+  }
 
   return (
     <Box
@@ -42,28 +67,30 @@ const ContactForm = () => {
         pr: { md: 5 },
       }}
     >
-      <form onSubmit={onSubmit}>
+      <form onSubmit={handleSubmit}>
         <TextField
           required
           type="text"
+          name="name"
           label="Name"
           placeholder="Enter your name"
           size="small"
           fullWidth
           margin="dense"
-          value={formData.name}
-          onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+          value={values.name}
+          onChange={handleInputChange}
         />
         <TextField
           required
           type="email"
+          name="email"
           label="Email"
           placeholder="Enter your email"
           size="small"
           fullWidth
           margin="dense"
-          value={formData.email}
-          onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+          value={values.email}
+          onChange={handleInputChange}
         />
         {/* <TextField
           type="text"
@@ -82,6 +109,7 @@ const ContactForm = () => {
         <TextField
           required
           type="text"
+          name="message"
           label="Message"
           size="small"
           margin="dense"
@@ -89,13 +117,12 @@ const ContactForm = () => {
           multiline
           maxRows={4}
           minRows={3}
-          value={formData.message}
-          onChange={(e) =>
-            setFormData({ ...formData, message: e.target.value })
+          value={values.message}
+          onChange={handleInputChange
           }
         />
-        <Button type="submit" size="medium" variant="outlined" sx={{ mt: 2 }}>
-          Submit
+        <Button disabled={isLoading} type="submit" size="medium" variant="outlined" sx={{ mt: 2 }}>
+        {isLoading ? 'Loading...' : 'Submit'}
         </Button>
       </form>
     </Box>
