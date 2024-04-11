@@ -35,8 +35,9 @@ const ContactForm = () => {
         throw new Error('Failed to submit the data. Please try again.')
       }
       // Handle response if necessary
-      const data = await response.json()
+      const data  = await response.json()
       console.log(data)
+
     } catch (error) {
             // Handle error if necessary
       console.error(error)
