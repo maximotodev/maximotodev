@@ -14,21 +14,33 @@
 
 import { NextApiRequest, NextApiResponse } from "next";
 import multiparty from "multiparty";
+import prisma from '@/utils/prisma'
 
 const handler = async (req: NextApiRequest, res: NextApiResponse) => {
-  const form = new multiparty.Form();
-  const data: { fields: { name: any; email: any; message: any; }, files: any } = await new Promise((resolve, reject) => {
+  try {
+    const form = new multiparty.Form();
+    const data: { fields: { name: any; email: any; message: any; }, files: any } = await new Promise((resolve, reject) => {
     form.parse(req, function (err, fields, files) {
       if (err) reject({ err });
       resolve({ fields, files });
     });
   });
-  
-  const { name, email, message } = data.fields
+const { name, email, message } = data.fields
+  // Create one Contact
+const Contact = await prisma.contact.create({
+  data: {
+    name: name[0],
+    email: email[0],
+    message: message[0],
+  }
+})
+  console.log(Contact)
+  res.status(200).json({ data: Contact });
 
-  console.log(name[0], email[0], message[0])
+  } catch (error) {
+    res.status(500).json({ error: 'failed to load data' })
+  }
   
-  res.status(200).json({ data: data });
 };
 
 export default handler;
