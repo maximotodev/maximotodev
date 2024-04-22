@@ -36,7 +36,7 @@ const ContactForm = () => {
       }
       // Handle response if necessary
       const data  = await response.json()
-      console.log(data)
+      
 
     } catch (error) {
             // Handle error if necessary
