@@ -1,5 +1,10 @@
 import { Box, Button, TextField } from "@mui/material";
+import { useRouter } from "next/router";
 import { FormEvent, useState } from "react";
+import Confetti from 'react-confetti';
+import {
+  useWindowSize,
+} from '@react-hook/window-size/throttled'
 
 const initialValues = {
   name: '',
@@ -8,6 +13,9 @@ const initialValues = {
 };
 
 const ContactForm = () => {
+  const router = useRouter()
+  const [width, height] = useWindowSize()
+  console.log(width, height)
   const [isLoading, setIsLoading] = useState<boolean>(false)
   const [error, setError] = useState<string | null>(null)
   const [values, setValues] = useState(initialValues);
@@ -42,8 +50,12 @@ const ContactForm = () => {
             // Handle error if necessary
       console.error(error)
     } finally {
-      setIsLoading(false)
-
+      setValues(initialValues)
+      setTimeout(()=>{
+        setIsLoading(false)
+        router.push('/')
+      }, 4000)
+      
     }
   }
 
@@ -68,7 +80,11 @@ const ContactForm = () => {
         pr: { md: 5 },
       }}
     >
-      <form onSubmit={handleSubmit}>
+      {isLoading ? <Confetti
+      width={width}
+      height={height}
+    /> : null}
+      {isLoading ? <p>Thank you!</p> : <form onSubmit={handleSubmit}>
         <TextField
           required
           type="text"
@@ -125,7 +141,8 @@ const ContactForm = () => {
         <Button disabled={isLoading} type="submit" size="medium" variant="outlined" sx={{ mt: 2 }}>
         {isLoading ? 'Loading...' : 'Submit'}
         </Button>
-      </form>
+      </form>}
+      
     </Box>
   );
 };

@@ -11,7 +11,7 @@
 //   res.status(200).json( { data: data } )
 
 // }
-
+ 
 import { NextApiRequest, NextApiResponse } from "next";
 import multiparty from "multiparty";
 import prisma from '@/utils/prisma'
@@ -34,7 +34,7 @@ const Contact = await prisma.contact.create({
     message: message[0],
   }
 })
-  console.log(Contact)
+  console.log(Contact);
   res.status(200).json({ data: Contact });
 
   } catch (error) {

@@ -4,6 +4,12 @@ import React from "react";
 import { EmailOutlined, PhoneAndroid, WhatsApp } from "@mui/icons-material";
 import Link from "next/link";
 import ContactForm from "./ContactForm";
+import Confetti from 'react-confetti';
+import {
+  useWindowSize,
+  useWindowWidth,
+  useWindowHeight,
+} from '@react-hook/window-size';
 
 const ContactSection = () => {
   const otherContactStyle = {
