@@ -1,17 +1,3 @@
-// import type { NextApiRequest, NextApiResponse } from 'next';
-
-
-// export default async function handler(
-//   req: NextApiRequest,
-//   res: NextApiResponse
-// ) {
-
-//   const data = JSON.stringify(req.body)
-//   console.log(data)
-//   res.status(200).json( { data: data } )
-
-// }
- 
 import { NextApiRequest, NextApiResponse } from "next";
 import multiparty from "multiparty";
 import prisma from '@/utils/prisma'
