@@ -4,7 +4,7 @@ import { FormEvent, useState } from "react";
 import Confetti from 'react-confetti';
 import {
   useWindowSize,
-} from '@react-hook/window-size/throttled'
+} from '@react-hook/window-size'
 
 const initialValues = {
   name: '',
@@ -15,7 +15,7 @@ const initialValues = {
 const ContactForm = () => {
   const router = useRouter()
   const [width, height] = useWindowSize()
-  console.log(width, height)
+  // console.log(width, height)
   const [isLoading, setIsLoading] = useState<boolean>(false)
   const [error, setError] = useState<string | null>(null)
   const [values, setValues] = useState(initialValues);
@@ -45,7 +45,7 @@ const ContactForm = () => {
       // Handle response if necessary
       const data  = await response.json()
       
-
+      console.log(data)
     } catch (error) {
             // Handle error if necessary
       console.error(error)
@@ -89,6 +89,7 @@ const ContactForm = () => {
           required
           type="text"
           name="name"
+          id="name"
           label="Name"
           placeholder="Enter your name"
           size="small"
@@ -101,6 +102,7 @@ const ContactForm = () => {
           required
           type="email"
           name="email"
+          id="email"
           label="Email"
           placeholder="Enter your email"
           size="small"
@@ -127,6 +129,7 @@ const ContactForm = () => {
           required
           type="text"
           name="message"
+          id="message"
           label="Message"
           size="small"
           margin="dense"
