@@ -34,7 +34,11 @@ const ContactForm = () => {
     setError(null) // Clear previous errors when a new request starts
     try {
       const formData = new FormData(event.currentTarget)
-      const response = await fetch('/api/submit', {
+      // const response = await fetch('/api/submit', {
+      //   method: 'POST',
+      //   body: formData,
+      // })
+      const response = await fetch('https://portfolio-next-js-master.vercel.app/api/submit', {
         method: 'POST',
         body: formData,
       })
@@ -45,7 +49,6 @@ const ContactForm = () => {
       // Handle response if necessary
       const data  = await response.json()
       
-      console.log(data)
     } catch (error) {
             // Handle error if necessary
       console.error(error)
@@ -54,7 +57,7 @@ const ContactForm = () => {
       setTimeout(()=>{
         setIsLoading(false)
         router.push('/')
-      }, 4000)
+      }, 3500)
       
     }
   }

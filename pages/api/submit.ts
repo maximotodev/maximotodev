@@ -21,7 +21,7 @@ const newContact = await prisma.contact.create({
     message: message[0],
   }
 })
-  res.status(200).json({ data });
+  res.status(200).json({ data: newContact });
   
   } catch (error) {
     res.status(500).json({ error: 'failed to load data' })
