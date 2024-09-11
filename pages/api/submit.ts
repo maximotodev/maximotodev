@@ -1,32 +1,31 @@
 import { NextApiRequest, NextApiResponse } from "next";
 import multiparty from "multiparty";
-import prisma from '@/utils/prisma'
-
-
+import { connectDB } from "@/lib/mongodb";
+import User from "@/models/User";
 const handler = async (req: NextApiRequest, res: NextApiResponse) => {
   try {
     const form = new multiparty.Form();
-    const data: { fields: { name: string; email: string; message: string; }, files: any } = await new Promise((resolve, reject) => {
-    form.parse(req, function (err, fields, files) {
-      if (err) reject({ err });
-      resolve({ fields, files });
+    const data: {
+      fields: { name: string; email: string; message: string };
+      files: any;
+    } = await new Promise((resolve, reject) => {
+      form.parse(req, function (err, fields, files) {
+        if (err) reject({ err });
+        resolve({ fields, files });
+      });
     });
-  });
-const { name, email, message } = data.fields
-  // Create one Contact
-const newContact = await prisma.contact.create({
-  data: {
-    name: name[0],
-    email: email[0],
-    message: message[0],
-  }
-})
-  res.status(200).json({ data: newContact });
-  
+    const { name, email, message } = data.fields;
+    await connectDB();
+    await User.create({
+      name: name[0],
+      email: email[0],
+      message: message[0],
+    });
+
+    res.status(200).json({ message: "Message sent!" });
   } catch (error) {
-    res.status(500).json({ error: 'failed to load data' })
+    res.status(500).json({ error: "Failed to send message " });
   }
-  
 };
 
 export default handler;
