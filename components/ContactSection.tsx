@@ -4,12 +4,12 @@ import React from "react";
 import { EmailOutlined, PhoneAndroid, WhatsApp } from "@mui/icons-material";
 import Link from "next/link";
 import ContactForm from "./ContactForm";
-import Confetti from 'react-confetti';
+import Confetti from "react-confetti";
 import {
   useWindowSize,
   useWindowWidth,
   useWindowHeight,
-} from '@react-hook/window-size';
+} from "@react-hook/window-size";
 
 const ContactSection = () => {
   const otherContactStyle = {
@@ -37,7 +37,11 @@ const ContactSection = () => {
             top: { md: -100 },
           }}
         >
-          <SectionTitle title="Contact" number="V" description={<>Shoot me a message</>} />
+          <SectionTitle
+            title="Contact"
+            number="V"
+            description={<>Shoot me a message</>}
+          />
           <ContactForm />
         </Grid>
         <Grid
@@ -89,7 +93,7 @@ const ContactSection = () => {
             <div>
               <h3>Email</h3>
               <Link target="_blank" href={"mailto:maximotodev@proton.me"}>
-              maximotodev@proton.me
+                maximotodev@proton.me
               </Link>
               {/* <Divider sx={{ height: 2 }} />
               <Link

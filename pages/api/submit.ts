@@ -1,9 +1,10 @@
 import { NextApiRequest, NextApiResponse } from "next";
 import multiparty from "multiparty";
 import { connectDB } from "@/lib/mongodb";
-import User from "@/models/User";
+import User, { UserDocument } from "@/models/User";
 const handler = async (req: NextApiRequest, res: NextApiResponse) => {
   try {
+    await connectDB();
     const form = new multiparty.Form();
     const data: {
       fields: { name: string; email: string; message: string };
@@ -15,7 +16,6 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
       });
     });
     const { name, email, message } = data.fields;
-    await connectDB();
     await User.create({
       name: name[0],
       email: email[0],

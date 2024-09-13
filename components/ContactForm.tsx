@@ -28,27 +28,19 @@ const ContactForm = () => {
     });
   };
 
-  async function handleSubmit(event: FormEvent<HTMLFormElement>) {
+  async function onSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
-    setIsLoading(true);
-    setError(null); // Clear previous errors when a new request starts
     try {
       const formData = new FormData(event.currentTarget);
       const response = await fetch("/api/submit", {
         method: "POST",
         body: formData,
       });
-      // const response = await fetch('/api/submit', {
-      //   method: 'POST',
-      //   body: formData,
-      // })
 
-      if (!response.ok) {
-        throw new Error("Failed to submit the data. Please try again.");
-      }
       // Handle response if necessary
       const data = await response.json();
-      console.log(data);
+      setIsLoading(true);
+      // ...}
     } catch (error) {
       // Handle error if necessary
       console.error(error);
@@ -57,7 +49,7 @@ const ContactForm = () => {
       setTimeout(() => {
         setIsLoading(false);
         router.push("/");
-      }, 3500);
+      }, 5000);
     }
   }
 
@@ -86,7 +78,7 @@ const ContactForm = () => {
       {isLoading ? (
         <p>Thank you!</p>
       ) : (
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={onSubmit}>
           <TextField
             required
             type="text"
