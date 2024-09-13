@@ -32,13 +32,14 @@ const ContactForm = () => {
     event.preventDefault();
     try {
       const formData = new FormData(event.currentTarget);
-      const response = await fetch("/api/submit", {
+      const response = await fetch("http://localhost:3000/api/submit", {
         method: "POST",
         body: formData,
       });
 
       // Handle response if necessary
       const data = await response.json();
+      console.log(data);
       setIsLoading(true);
       // ...}
     } catch (error) {
@@ -49,7 +50,7 @@ const ContactForm = () => {
       setTimeout(() => {
         setIsLoading(false);
         router.push("/");
-      }, 5000);
+      }, 4000);
     }
   }
 
