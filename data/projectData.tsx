@@ -43,16 +43,15 @@ export const projectInfo = {
   description: (
     <>
       I have worked and participated on many projects: personal, freelance and
-      enterprise. The recents projects are listed below and others
-      can be found on my{" "}
+      enterprise. The recents projects are listed below and others can be found
+      on my{" "}
       <Link href={socialLinks.github.link} target="_blank" className="textP">
         {socialLinks.github.name}
-      </Link>{" "}
-      and{" "}
-      <Link href={socialLinks.gitlab.link} target="_blank" className="textP">
+      </Link>
+      .
+      {/* <Link href={socialLinks.gitlab.link} target="_blank" className="textP">
         {socialLinks.gitlab.name}
-      </Link>{" "}
-      accounts.{" "}
+      </Link>{" "} */}
       {/* <span style={{ fontStyle: "italic" }}>
         (Unfortunately, several enterprise projects are in private mode)
       </span> */}

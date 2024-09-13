@@ -32,7 +32,7 @@ const ContactForm = () => {
     event.preventDefault();
     try {
       const formData = new FormData(event.currentTarget);
-      const response = await fetch("http://127.0.0.1:3000/api/submit", {
+      const response = await fetch("http://localhost:3000/api/submit", {
         method: "POST",
         body: formData,
       });

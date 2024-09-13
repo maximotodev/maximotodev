@@ -16,7 +16,8 @@ export const aboutInfo = {
   name: "Maximoto",
   description: (
     <>
-      I am a fullstack developer and bitcoin maximalist. I like to work with software and computers.
+      Fullstack developer and bitcoin maximalist. I love creating applications
+      and solutions for the real world.
     </>
   ),
   socials: [
@@ -41,13 +42,13 @@ export const aboutInfo = {
       icon: <GitHub />,
       color: "",
     },
-    {
-      id: 4,
-      name: socialLinks.gitlab.name,
-      href: socialLinks.gitlab.link,
-      icon: gitlabIcon,
-      color: "",
-    },
+    // {
+    //   id: 4,
+    //   name: socialLinks.gitlab.name,
+    //   href: socialLinks.gitlab.link,
+    //   icon: gitlabIcon,
+    //   color: "",
+    // },
   ],
   profilePic: profilePic,
 };
@@ -60,18 +61,12 @@ export const experiences = [
       {
         icon: <DataObject fontSize="small" />,
         title: "Frontend Developer Apprentice",
-        dec: (
-          <>At scrimba</>
-        ),
+        dec: <>At scrimba</>,
       },
       {
         icon: <Code fontSize="small" />,
         title: "Freelance Web & Mobile Dev",
-        dec: (
-          <>
-            Web app developer.
-          </>
-        ),
+        dec: <>Web app developer.</>,
       },
     ],
   },
@@ -82,20 +77,12 @@ export const experiences = [
       {
         icon: <DataObject fontSize="small" />,
         title: "Fullstack Developer Apprentice",
-        dec: (
-          <>
-            At{" "} {experienceLinks.ubora.name} and codecademy
-          </>
-        ),
+        dec: <>At {experienceLinks.ubora.name} and codecademy</>,
       },
       {
         icon: <BusinessCenterOutlined fontSize="small" />,
         title: "Freelancer & UI Designer",
-        dec: (
-          <>
-            Web/Mobile App, UI Design & API.
-          </>
-        ),
+        dec: <>Web/Mobile App, UI Design & API.</>,
       },
     ],
   },
@@ -108,27 +95,41 @@ export const experiences = [
         title: "HarvardX's Computer Science for Web Programming",
         dec: (
           <>
-            Software Engineering & Algorithms at CS50's Introduction to Computer Science.
+            Software Engineering & Algorithms at CS50's Introduction to Computer
+            Science.
           </>
         ),
       },
       {
         icon: <Phonelink fontSize="small" />,
-        title: "Fullstack Developer",
-        dec: (
-          <>
-            At{" "}TBA
-          </>
-        ),
+        title: "Project Developer",
+        dec: <>Develop and maintain code for Tribe-BTC</>,
       },
       {
         icon: <BusinessCenterOutlined fontSize="small" />,
         title: "Freelancer & UI Designer",
-        dec: (
-          <>
-            Professional Web/Mobile App, UI Design.
-          </>
-        ),
+        dec: <>Professional Web/Mobile App, UI Design.</>,
+      },
+    ],
+  },
+  {
+    id: "4",
+    year: 2024,
+    exp: [
+      {
+        icon: <SchoolOutlined fontSize="small" />,
+        title: "CS50's Introduction to Computer Science",
+        dec: <>HarvardX • CS50x</>,
+      },
+      {
+        icon: <Phonelink fontSize="small" />,
+        title: "Solidity Developer",
+        dec: <>Web3 and blockchain technologies</>,
+      },
+      {
+        icon: <BusinessCenterOutlined fontSize="small" />,
+        title: "Freelancer & UI Designer",
+        dec: <>Professional Web/Mobile App, UI Design.</>,
       },
     ],
   },

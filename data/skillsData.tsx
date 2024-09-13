@@ -262,8 +262,8 @@ export const skillsData = {
   number: "IV",
   description: (
     <>
-      I use the technologies and frameworks listed below to build professional applications and
-      mockups.
+      I use the technologies and frameworks listed below to build professional
+      applications and mockups.
     </>
   ),
   stack: [

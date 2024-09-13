@@ -25,13 +25,13 @@ const socialsGit = [
     icon: <GitHub />,
     color: "",
   },
-  {
-    id: 2,
-    name: socialLinks.gitlab.name,
-    href: socialLinks.gitlab.link,
-    icon: gitlabIcon,
-    color: "",
-  },
+  // {
+  //   id: 2,
+  //   name: socialLinks.gitlab.name,
+  //   href: socialLinks.gitlab.link,
+  //   icon: gitlabIcon,
+  //   color: "",
+  // },
 ];
 
 const recentsProjects = projectData.slice(0, 5);
@@ -157,7 +157,7 @@ const ProjectsSection = () => {
                 </IconButton>
               </Tooltip>
             ))}
-            <Link href="/about#cv">
+            {/* <Link href="/about#cv">
               <Button
                 sx={{
                   backgroundColor: "var(--cardBgColor)",
@@ -168,7 +168,7 @@ const ProjectsSection = () => {
               >
                 View the CV
               </Button>
-            </Link>
+            </Link> */}
           </div>
         </Grid>
       </Grid>
