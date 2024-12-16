@@ -9,11 +9,11 @@ export const gitlabIcon = (
 export const socialLinks = {
   github: { name: "GitHub", link: "https://github.com/maximotodev/" },
   // gitlab: { name: "GitLab", link: "#" },
-  linkedin: {
-    name: "LinkedIn",
-    link: "https://www.linkedin.com/in/diego-aguero-90101322a/",
-  },
-  twitter: { name: "X(Twitter)", link: "https://twitter.com/maximotodev/" },
+  // linkedin: {
+  //   name: "LinkedIn",
+  //   link: "https://www.linkedin.com/in/diego-aguero-90101322a/",
+  // },
+  // twitter: { name: "X(Twitter)", link: "https://twitter.com/maximotodev/" },
   nostr: {
     name: "Nostr",
     link: "https://snort.social/nprofile1qqsd2twjl8axqlnsmeh8h28tnj3wneel6dx7epz4tav4dj7rrxtpd8gprdmhxue69uhkummnw3ezummjv9hxwetsd9kxctnyv4mz7qgewaehxw309aex2mrp0yh8xmn0wf6zuum0vd5kzmp0qyt8wumn8ghj7etyv4hzumn0wd68ytnvv9hxgtc2a6r5v",

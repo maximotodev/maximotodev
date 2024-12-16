@@ -16,25 +16,30 @@ export const aboutInfo = {
   name: "Maximoto",
   description: (
     <>
-      Fullstack developer and bitcoin maximalist. I love creating applications
-      and solutions for the real world.
+      Software Developer, with expertise in Python, including Python for
+      operating systems, and proficiency in front-end technologies such as HTML,
+      CSS, JavaScript, and React. Experienced in version control systems (e.g.,
+      Git) and various frameworks, with a strong ability to build, maintain, and
+      optimize scalable applications. Skilled in both backend and frontend
+      development, with a focus on clean code, efficient workflows, and
+      collaborative team environments.
     </>
   ),
   socials: [
-    {
-      id: 1,
-      name: socialLinks.linkedin.name,
-      href: socialLinks.linkedin.name,
-      icon: <LinkedIn />,
-      color: "",
-    },
-    {
-      id: 2,
-      name: socialLinks.twitter.name,
-      href: socialLinks.twitter.link,
-      icon: <Twitter />,
-      color: "",
-    },
+    // {
+    //   id: 1,
+    //   name: socialLinks.linkedin.name,
+    //   href: socialLinks.linkedin.name,
+    //   icon: <LinkedIn />,
+    //   color: "",
+    // },
+    // {
+    //   id: 2,
+    //   name: socialLinks.twitter.name,
+    //   href: socialLinks.twitter.link,
+    //   icon: <Twitter />,
+    //   color: "",
+    // },
     {
       id: 3,
       name: socialLinks.github.name,
