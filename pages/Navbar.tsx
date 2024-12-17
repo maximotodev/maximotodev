@@ -53,8 +53,8 @@ const pages = [
   },
   {
     id: 3,
-    name: "Gallery",
-    href: "/gallery",
+    name: "Certifications",
+    href: "/certifications",
     icon: <WebStoriesOutlined />,
   },
   {
