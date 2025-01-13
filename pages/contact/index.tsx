@@ -1,9 +1,9 @@
 import ContactSection from "@/components/ContactSection";
-import ContactForm from "@/components/ContactForm";
+import Form from "@/components/Form";
 import React from "react";
 
 function Contact() {
-  return <ContactSection />;
+  return <Form />;
   // return <ContactForm />;
 }
 
