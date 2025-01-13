@@ -16,6 +16,7 @@
     "@mui/material": "^5.14.14",
     "@prisma/client": "^5.12.1",
     "@react-hook/window-size": "^3.1.1",
+    "@supabase/supabase-js": "^2.47.12",
     "fastify-multipart": "^5.4.0",
     "mongodb": "^6.8.1",
     "mongoose": "^8.6.2",
