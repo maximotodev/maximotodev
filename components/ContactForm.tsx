@@ -2,6 +2,8 @@
 
 import React, { useState } from "react";
 import { useRouter } from "next/navigation";
+import { useWindowSize } from "react-use";
+import Confetti from "react-confetti";
 
 interface FormData {
   name: string;
@@ -10,6 +12,7 @@ interface FormData {
 }
 
 const ContactForm: React.FC = () => {
+  const { width, height } = useWindowSize();
   const router = useRouter();
   const [formData, setFormData] = useState<FormData>({
     name: "",
@@ -56,53 +59,57 @@ const ContactForm: React.FC = () => {
         email: "",
         message: "",
       });
+      setTimeout(() => router.push("/"), 5000);
     }
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <div>
-        <label htmlFor="name">Name:</label>
-        <input
-          type="text"
-          id="name"
-          name="name"
-          value={formData.name}
-          onChange={handleChange}
-          required
-        />
-      </div>
-      <div>
-        <label htmlFor="email">Email:</label>
-        <input
-          type="email"
-          id="email"
-          name="email"
-          value={formData.email}
-          onChange={handleChange}
-          required
-        />
-      </div>
-      <div>
-        <label htmlFor="message">Message:</label>
-        <textarea
-          id="message"
-          name="message"
-          value={formData.message}
-          onChange={handleChange}
-          required
-        />
-      </div>
-      <button type="submit" disabled={isLoading}>
-        {isLoading ? "Sending..." : "Send Message"}
-      </button>
+    <div>
+      {isSuccess && <Confetti width={width} height={height} />}
+      <form onSubmit={handleSubmit}>
+        <div>
+          <label htmlFor="name">Name:</label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            value={formData.name}
+            onChange={handleChange}
+            required
+          />
+        </div>
+        <div>
+          <label htmlFor="email">Email:</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            value={formData.email}
+            onChange={handleChange}
+            required
+          />
+        </div>
+        <div>
+          <label htmlFor="message">Message:</label>
+          <textarea
+            id="message"
+            name="message"
+            value={formData.message}
+            onChange={handleChange}
+            required
+          />
+        </div>
+        <button type="submit" disabled={isLoading}>
+          {isLoading ? "Sending..." : "Send Message"}
+        </button>
 
-      {isSuccess && (
-        <p className="success-message">Message sent successfully!</p>
-      )}
+        {isSuccess && (
+          <p className="success-message">Message sent successfully!</p>
+        )}
 
-      {errorMessage && <p className="error-message">{errorMessage}</p>}
-    </form>
+        {errorMessage && <p className="error-message">{errorMessage}</p>}
+      </form>
+    </div>
   );
 };
 
