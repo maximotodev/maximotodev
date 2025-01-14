@@ -7,7 +7,6 @@ const Footer = () => {
     <Container
       maxWidth="xl"
       sx={{
-        // backgroundColor: "var(--cardBgColor)",
         pb: 2,
       }}
     >

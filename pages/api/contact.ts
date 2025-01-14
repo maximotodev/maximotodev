@@ -7,7 +7,7 @@ export default async function handler(
   if (req.method === "POST") {
     try {
       const { name, email, message } = req.body;
-
+      console.log(name, email, message);
       // Send the email using your preferred method (e.g., Nodemailer)
       // ...
 

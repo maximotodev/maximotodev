@@ -1,152 +1,108 @@
-import { Box, Button, TextField } from "@mui/material";
-import { useRouter } from "next/router";
-import { FormEvent, useState } from "react";
-import Confetti from "react-confetti";
-import { useWindowSize } from "@react-hook/window-size";
+// components/Form.tsx
 
-const initialValues = {
-  name: "",
-  email: "",
-  message: "",
-};
+import React, { useState } from "react";
+import { useRouter } from "next/navigation";
 
-const ContactForm = () => {
+interface FormData {
+  name: string;
+  email: string;
+  message: string;
+}
+
+const ContactForm: React.FC = () => {
   const router = useRouter();
-  const [width, height] = useWindowSize();
-  // console.log(width, height)
-  const [isLoading, setIsLoading] = useState<boolean>(false);
-  const [error, setError] = useState<string | null>(null);
-  const [values, setValues] = useState(initialValues);
+  const [formData, setFormData] = useState<FormData>({
+    name: "",
+    email: "",
+    message: "",
+  });
+  const [isLoading, setIsLoading] = useState(false);
+  const [isSuccess, setIsSuccess] = useState(false);
+  const [errorMessage, setErrorMessage] = useState("");
 
-  const handleInputChange = (event: {
-    target: { name: string; value: string };
-  }) => {
-    const { name, value } = event.target;
-    setValues({
-      ...values,
-      [name]: value,
-    });
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
+    const { name, value } = e.target;
+    setFormData({ ...formData, [name]: value });
   };
 
-  async function onSubmit(event: FormEvent<HTMLFormElement>) {
-    event.preventDefault();
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setIsLoading(true);
+    setErrorMessage("");
+
     try {
-      const formData = new FormData(event.currentTarget);
-      const response = await fetch("http://localhost:3000/api/submit", {
+      const response = await fetch("/api/contact", {
         method: "POST",
-        body: formData,
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
       });
 
-      // Handle response if necessary
-      const data = await response.json();
-      console.log(data);
-      setIsLoading(true);
-      // ...}
+      if (!response.ok) {
+        throw new Error("Failed to send message");
+      }
+
+      setIsSuccess(true);
     } catch (error) {
-      // Handle error if necessary
-      console.error(error);
+      console.error("Error sending message:", error);
+      setErrorMessage("Failed to send message. Please try again later.");
     } finally {
-      setValues(initialValues);
-      setTimeout(() => {
-        setIsLoading(false);
-        router.push("/");
-      }, 4000);
+      setIsLoading(false);
+      setFormData({
+        name: "",
+        email: "",
+        message: "",
+      });
     }
-  }
+  };
 
   return (
-    <Box
-      sx={{
-        label: { color: "var(--foregroundColor)", opacity: 0.7 },
-        fieldset: {
-          borderColor: "var(--foregroundColor)",
-          opacity: 0.5,
-          borderWidth: 0.1,
-        },
-        ".MuiTextField-root:hover label": {
-          color: "var(--primaryColor)",
-        },
-        ".MuiTextField-root:hover fieldset": {
-          borderColor: "var(--primaryColor)",
-        },
-        ".Mui-focused fieldset": { borderColor: "#fff", display: "none" },
-        input: { color: "var(--foregroundColor)" },
-        textarea: { color: "var(--foregroundColor)" },
-        pr: { md: 5 },
-      }}
-    >
-      {isLoading ? <Confetti width={width} height={height} /> : null}
-      {isLoading ? (
-        <p>Thank you!</p>
-      ) : (
-        <form onSubmit={onSubmit}>
-          <TextField
-            required
-            type="text"
-            name="name"
-            id="name"
-            label="Name"
-            placeholder="Enter your name"
-            size="small"
-            fullWidth
-            margin="dense"
-            value={values.name}
-            onChange={handleInputChange}
-          />
-          <TextField
-            required
-            type="email"
-            name="email"
-            id="email"
-            label="Email"
-            placeholder="Enter your email"
-            size="small"
-            fullWidth
-            margin="dense"
-            value={values.email}
-            onChange={handleInputChange}
-          />
-          {/* <TextField
+    <form onSubmit={handleSubmit}>
+      <div>
+        <label htmlFor="name">Name:</label>
+        <input
           type="text"
-          label="Subject"
-          size="small"
-          fullWidth
-          margin="dense"
-          value={formData.subject}
-          onChange={(e) =>
-            setFormData({
-              ...formData,
-              subject: e.target.value,
-            })
-          }
-        /> */}
-          <TextField
-            required
-            type="text"
-            name="message"
-            id="message"
-            label="Message"
-            size="small"
-            margin="dense"
-            fullWidth
-            multiline
-            maxRows={4}
-            minRows={3}
-            value={values.message}
-            onChange={handleInputChange}
-          />
-          <Button
-            disabled={isLoading}
-            type="submit"
-            size="medium"
-            variant="outlined"
-            sx={{ mt: 2 }}
-          >
-            {isLoading ? "Loading..." : "Submit"}
-          </Button>
-        </form>
+          id="name"
+          name="name"
+          value={formData.name}
+          onChange={handleChange}
+          required
+        />
+      </div>
+      <div>
+        <label htmlFor="email">Email:</label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          value={formData.email}
+          onChange={handleChange}
+          required
+        />
+      </div>
+      <div>
+        <label htmlFor="message">Message:</label>
+        <textarea
+          id="message"
+          name="message"
+          value={formData.message}
+          onChange={handleChange}
+          required
+        />
+      </div>
+      <button type="submit" disabled={isLoading}>
+        {isLoading ? "Sending..." : "Send Message"}
+      </button>
+
+      {isSuccess && (
+        <p className="success-message">Message sent successfully!</p>
       )}
-    </Box>
+
+      {errorMessage && <p className="error-message">{errorMessage}</p>}
+    </form>
   );
 };
 
