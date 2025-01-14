@@ -1,3 +1,4 @@
+import { supabaseClient } from "@/utils/supabase";
 import type { NextApiRequest, NextApiResponse } from "next";
 
 export default async function handler(
@@ -5,16 +6,22 @@ export default async function handler(
   res: NextApiResponse
 ) {
   if (req.method === "POST") {
-    try {
-      const { name, email, message } = req.body;
-      console.log(name, email, message);
-      // Send the email using your preferred method (e.g., Nodemailer)
-      // ...
+    const { name, email, message } = req.body;
 
-      res.status(200).json({ message: "Message sent successfully" });
+    try {
+      const { data, error } = await supabaseClient
+        .from("contacts")
+        .insert([{ name, email, message }]);
+
+      if (error) {
+        console.error("Error creating contact:", error);
+        return res.status(500).json({ error: "Failed to create contact" });
+      }
+
+      res.status(201).json({ message: "Contact created successfully", data });
     } catch (error) {
-      console.error("Error sending email:", error);
-      res.status(500).json({ error: "Failed to send message" });
+      console.error("Error creating contact:", error);
+      res.status(500).json({ error: "Failed to create contact" });
     }
   } else {
     res.status(405).end(); // Method Not Allowed
