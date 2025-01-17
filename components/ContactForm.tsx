@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import { useRouter } from "next/navigation";
 import { useWindowSize } from "react-use";
 import Confetti from "react-confetti";
+import { Box, Button, TextField } from "@mui/material";
 
 interface FormData {
   name: string;
@@ -64,11 +65,34 @@ const ContactForm: React.FC = () => {
   };
 
   return (
-    <div>
+    <Box
+      sx={{
+        label: { color: "var(--foregroundColor)", opacity: 0.7 },
+        fieldset: {
+          borderColor: "var(--foregroundColor)",
+          opacity: 0.5,
+          borderWidth: 0.1,
+        },
+        ".MuiTextField-root:hover label": {
+          color: "var(--primaryColor)",
+        },
+        ".MuiTextField-root:hover fieldset": {
+          borderColor: "var(--primaryColor)",
+        },
+        ".Mui-focused fieldset": { borderColor: "#fff", display: "none" },
+        input: { color: "var(--foregroundColor)" },
+        textarea: { color: "var(--foregroundColor)" },
+        pr: { md: 5 },
+      }}
+    >
       {isSuccess && <Confetti width={width} height={height} />}
       <form onSubmit={handleSubmit}>
-        <div>
-          <label htmlFor="name">Name:</label>
+        {/* <div>
+          <label
+            htmlFor="name"
+          >
+            Name:
+          </label>
           <input
             type="text"
             id="name"
@@ -98,10 +122,60 @@ const ContactForm: React.FC = () => {
             onChange={handleChange}
             required
           />
-        </div>
-        <button type="submit" disabled={isLoading}>
+        </div> */}
+        <TextField
+          required
+          type="text"
+          name="name"
+          id="name"
+          label="Name"
+          placeholder="Enter your name"
+          size="small"
+          fullWidth
+          margin="dense"
+          value={formData.name}
+          onChange={handleChange}
+        />
+        <TextField
+          required
+          type="email"
+          name="email"
+          id="email"
+          label="Email"
+          placeholder="Enter your email"
+          size="small"
+          fullWidth
+          margin="dense"
+          value={formData.email}
+          onChange={handleChange}
+        />
+        <TextField
+          required
+          type="text"
+          name="message"
+          id="message"
+          label="Message"
+          size="small"
+          margin="dense"
+          fullWidth
+          multiline
+          maxRows={4}
+          minRows={3}
+          value={formData.message}
+          onChange={handleChange}
+        />
+        {/* <button type="submit" disabled={isLoading}>
           {isLoading ? "Sending..." : "Send Message"}
-        </button>
+        </button> */}
+        <Button
+          disabled={isLoading}
+          type="submit"
+          size="medium"
+          variant="outlined"
+          sx={{ mt: 2 }}
+        >
+          {isLoading ? "Loading..." : "Submit"}
+        </Button>
 
         {isSuccess && (
           <p className="success-message">Message sent successfully!</p>
@@ -109,7 +183,7 @@ const ContactForm: React.FC = () => {
 
         {errorMessage && <p className="error-message">{errorMessage}</p>}
       </form>
-    </div>
+    </Box>
   );
 };
 
