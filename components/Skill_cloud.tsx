@@ -23,7 +23,6 @@ const useIcons = (slugs: string[]) => {
       })
     );
   }
-
   return <a>Loading...</a>;
 };
 
@@ -68,24 +67,24 @@ const slugs = [
 /**
  * * get the tech list from the cloud-icons
  */
-// let tab = "";
-// slugs.forEach((tech) => {
-//   tab += `
-//     {
-//       name: "${tech}",
-//       icon:"",
-//       dot:"#fff",
-//       starred: false
-//     },
-//   `;
-// });
+let tab = "";
+slugs.forEach((tech) => {
+  tab += `
+    {
+      name: "${tech}",
+      icon:"",
+      dot:"#fff",
+      starred: false
+    },
+  `;
+});
 // console.log(tab);
 
 const cloudProps: Omit<ICloud, "children"> = {
   id: "stable-id-for-csr-ssr",
   containerProps: {
     style: {
-      backgroundColor: "whitesmoke",
+      backgroundColor: "#d1dae3",
       borderRadius: "80%",
       display: "flex",
       justifyContent: "center",
@@ -95,7 +94,9 @@ const cloudProps: Omit<ICloud, "children"> = {
     },
   },
   canvasProps: {
-    style: { maxWidth: "80%" },
+    style: {
+      maxWidth: "80%",
+    },
   },
   options: {
     reverse: true,
@@ -107,7 +108,7 @@ const cloudProps: Omit<ICloud, "children"> = {
     initial: [0.1, -0.1],
     clickToFront: 500,
     tooltipDelay: 0,
-    outlineColour: "#0000",
+    outlineColour: "#00000",
   },
 };
 

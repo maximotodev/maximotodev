@@ -1,10 +1,9 @@
 import {
   BusinessCenterOutlined,
   GitHub,
-  LinkedIn,
   Phonelink,
   SchoolOutlined,
-  Twitter,
+  TerminalOutlined,
 } from "@mui/icons-material";
 import { experienceLinks, gitlabIcon, socialLinks } from "../utils/variables";
 import profilePic from "@/assets/images/profilePic.png";
@@ -13,16 +12,16 @@ import Link from "next/link";
 
 export const aboutInfo = {
   number: "I",
-  name: "Maximoto",
+  name: "Diego Aguero",
   description: (
     <>
       Software Developer, with expertise in Python, including Python for
       operating systems, and proficiency in front-end technologies such as HTML,
-      CSS, JavaScript, and React. Experienced in version control systems (e.g.,
-      Git) and various frameworks, with a strong ability to build, maintain, and
-      optimize scalable applications. Skilled in both backend and frontend
-      development, with a focus on clean code, efficient workflows, and
-      collaborative team environments.
+      CSS, JavaScript, and React. Experienced in version control systems and
+      various frameworks, with a strong ability to build, maintain, and optimize
+      scalable applications. Skilled in both backend and frontend development,
+      with a focus on clean code, efficient workflows, and collaborative team
+      environments.
     </>
   ),
   socials: [
@@ -127,9 +126,9 @@ export const experiences = [
         dec: <>HarvardX • CS50x</>,
       },
       {
-        icon: <Phonelink fontSize="small" />,
-        title: "Solidity Developer",
-        dec: <>Web3 and blockchain technologies</>,
+        icon: <TerminalOutlined fontSize="small" />,
+        title: "Google IT Automation with Python Professional Certificate",
+        dec: <>Coursera</>,
       },
       {
         icon: <BusinessCenterOutlined fontSize="small" />,
