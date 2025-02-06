@@ -83,18 +83,20 @@ const slugs = [
 
 const cloudProps: Omit<ICloud, "children"> = {
   id: "stable-id-for-csr-ssr",
-  // containerProps: {
-  //   style: {
-  //     display: "flex",
-  //     justifyContent: "center",
-  //     alignItems: "center",
-  //     marginLeft: 40,
-  //     marginRight: 40,
-  //   },
-  // },
-  // canvasProps: {
-  //   style: { maxWidth: "80%" },
-  // },
+  containerProps: {
+    style: {
+      backgroundColor: "whitesmoke",
+      borderRadius: "80%",
+      display: "flex",
+      justifyContent: "center",
+      alignItems: "center",
+      marginLeft: 40,
+      marginRight: 40,
+    },
+  },
+  canvasProps: {
+    style: { maxWidth: "80%" },
+  },
   options: {
     reverse: true,
     depth: 1,

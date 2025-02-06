@@ -95,12 +95,12 @@ const SkillsSection = () => {
                     textTransform: "capitalize",
                     textAlign: "center",
                     fontSize: 10,
-                    // opacity: 0.8,
+                    opacity: 0.8,
                   },
 
                   img: {
                     width: { xs: 50 },
-                    // height={60}
+                    // height= {60},
                   },
                 }}
               >

@@ -13,8 +13,8 @@ import Link from "next/link";
 
 import profilePic from "@/assets/images/profilePic.jpeg";
 import Image from "next/image";
-import SectionTilte from "./SectionTitle";
-import { gitlabIcon, socialLinks } from "@/utils/variables";
+import SectionTitle from "./SectionTitle";
+import { socialLinks } from "@/utils/variables";
 import { projectData, projectInfo } from "@/data/projectData";
 
 const socialsGit = [
@@ -25,17 +25,9 @@ const socialsGit = [
     icon: <GitHub />,
     color: "",
   },
-  // {
-  //   id: 2,
-  //   name: socialLinks.gitlab.name,
-  //   href: socialLinks.gitlab.link,
-  //   icon: gitlabIcon,
-  //   color: "",
-  // },
 ];
 
 const recentsProjects = projectData.slice(0, 5);
-// console.log(recentsProjects)
 
 const ProjectsSection = () => {
   return (
@@ -65,7 +57,7 @@ const ProjectsSection = () => {
           >
             <h3 style={{ marginBottom: 0 }}>Recents Projects</h3>
             {projectData.length > recentsProjects.length && (
-              <Link className="textP" href={"/projects"}>
+              <Link className="textP" href={"/projemnjcts"}>
                 View all ({projectData.length})
               </Link>
             )}
@@ -140,7 +132,7 @@ const ProjectsSection = () => {
           </List>
         </Grid>
         <Grid sx={{ position: "relative", pl: { md: 4 } }} item xs={12} md={6}>
-          <SectionTilte
+          <SectionTitle
             title={projectInfo.title}
             number={projectInfo.number}
             description={projectInfo.description}
