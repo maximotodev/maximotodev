@@ -4,9 +4,9 @@ import Link from "next/link";
 
 export const projectData = [
   {
-    name: "Constructor: Real Estate",
-    image: "https://i.ibb.co/1JKBNQVv/real-estate.png",
-    links: "https://real-estate-constructor.vercel.app/",
+    name: "Tribev2 - Publicly Auditable Cooperatives on Bitcoin",
+    image: "https://i.ibb.co/Mk1C1gnP/tribev2.png",
+    links: "https://tribev2.vercel.app/",
   },
   {
     name: "Constructor: Real Estate",
