@@ -4,27 +4,27 @@ import Link from "next/link";
 
 export const projectData = [
   {
-    name: "Tribev2 - Publicly Auditable Cooperatives on Bitcoin",
+    name: "Tribev2",
     image: "https://i.ibb.co/Mk1C1gnP/tribev2.png",
     links: "https://tribev2.vercel.app/",
   },
   {
-    name: "Mia Reynolds Official Website",
+    name: "Mia Reynolds Website",
     image: "https://i.ibb.co/twDgyR0B/projects-mia-reynolds.png",
     links: "https://miareynolds.vercel.app/",
   },
   {
-    name: "Constructor: Real Estate",
+    name: "Constructor Real State",
     image: "https://i.ibb.co/1JKBNQVv/real-estate.png",
     links: "https://real-estate-constructor.vercel.app/",
   },
   {
-    name: "Constructor: Real Estate",
+    name: "Constructor Real State",
     image: "https://i.ibb.co/1JKBNQVv/real-estate.png",
     links: "https://real-estate-constructor.vercel.app/",
   },
   {
-    name: "Constructor: Real Estate",
+    name: "Constructor Real State",
     image: "https://i.ibb.co/1JKBNQVv/real-estate.png",
     links: "https://real-estate-constructor.vercel.app/",
   },

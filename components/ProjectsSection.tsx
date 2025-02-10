@@ -112,7 +112,7 @@ const ProjectsSection = () => {
                   <div className="imagePro">
                     <Image
                       src={project.image}
-                      width={150}
+                      width={100}
                       height={100}
                       priority
                       alt={project.name}
