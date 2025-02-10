@@ -115,7 +115,7 @@ const ProjectsSection = () => {
                       width={150}
                       height={100}
                       priority
-                      alt=""
+                      alt={project.name}
                     />
                   </div>
                 </ListItemButton>

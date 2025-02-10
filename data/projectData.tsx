@@ -9,9 +9,9 @@ export const projectData = [
     links: "https://tribev2.vercel.app/",
   },
   {
-    name: "Constructor: Real Estate",
-    image: "https://i.ibb.co/1JKBNQVv/real-estate.png",
-    links: "https://real-estate-constructor.vercel.app/",
+    name: "Mia Reynolds Official Website",
+    image: "https://i.ibb.co/twDgyR0B/projects-mia-reynolds.png",
+    links: "https://miareynolds.vercel.app/",
   },
   {
     name: "Constructor: Real Estate",
