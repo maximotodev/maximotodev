@@ -1,7 +1,6 @@
-import { AccountTree, ArticleOutlined, GitHub } from "@mui/icons-material";
+import { GitHub } from "@mui/icons-material";
 import {
   Box,
-  Button,
   Divider,
   Grid,
   IconButton,
@@ -10,8 +9,6 @@ import {
   Tooltip,
 } from "@mui/material";
 import Link from "next/link";
-
-import profilePic from "@/assets/images/profilePic.jpeg";
 import Image from "next/image";
 import SectionTitle from "./SectionTitle";
 import { socialLinks } from "@/utils/variables";
@@ -27,7 +24,7 @@ const socialsGit = [
   },
 ];
 
-const recentsProjects = projectData.slice(0, 5);
+const recentProjects = projectData.slice(0, 5);
 
 const ProjectsSection = () => {
   return (
@@ -55,12 +52,7 @@ const ProjectsSection = () => {
               justifyContent: "space-between",
             }}
           >
-            <h3 style={{ marginBottom: 0 }}>Recents Projects</h3>
-            {projectData.length > recentsProjects.length && (
-              <Link className="textP" href={"/projemnjcts"}>
-                View all ({projectData.length})
-              </Link>
-            )}
+            <h3 style={{ marginBottom: 0 }}>Recent Projects</h3>
           </div>
           <List>
             <Divider
@@ -69,8 +61,8 @@ const ProjectsSection = () => {
                 opacity: 0.8,
               }}
             />
-            {recentsProjects.map((project, index) => (
-              <Link key={index} href={`projects/${project.slug}`}>
+            {recentProjects.map((project, index) => (
+              <Link target="_blank" key={index} href={project.links}>
                 <ListItemButton
                   sx={{
                     borderBottom: "1px solid var(--foregroundColor)",
@@ -119,7 +111,7 @@ const ProjectsSection = () => {
                   <span>{project.name}</span>
                   <div className="imagePro">
                     <Image
-                      src={`/projects/${project.slug}/banner.png`}
+                      src={project.image}
                       width={150}
                       height={100}
                       priority
@@ -149,18 +141,6 @@ const ProjectsSection = () => {
                 </IconButton>
               </Tooltip>
             ))}
-            {/* <Link href="/about#cv">
-              <Button
-                sx={{
-                  backgroundColor: "var(--cardBgColor)",
-                  mx: 0.5,
-                  color: "var(--foregroundColor)",
-                }}
-                startIcon={<ArticleOutlined />}
-              >
-                View the CV
-              </Button>
-            </Link> */}
           </div>
         </Grid>
       </Grid>

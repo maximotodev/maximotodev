@@ -34,6 +34,12 @@ const certifications: { title: string; link: string; image: string }[] = [
     link: "https://coursera.org/verify/LHZ8ZWXK3NCH",
     image: "https://i.ibb.co/Pz6t9VTD/coursera-troubleshooting-debugging.png",
   },
+  {
+    title: "Configuration Management and the Cloud",
+    link: "https://coursera.org/verify/OEYQ6UYY3SUN",
+    image:
+      "https://i.ibb.co/KxjQvsRW/coursera-configuration-management-and-cloud.png",
+  },
 ];
 const Certifications = () => {
   return (

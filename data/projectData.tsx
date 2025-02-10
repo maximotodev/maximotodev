@@ -1,39 +1,32 @@
 import profilePic from "@/assets/images/profilePic.png";
 import { socialLinks } from "@/utils/variables";
 import Link from "next/link";
-// import dj from "../assets/projects"
 
-const bannerImg = "../assets/projects";
 export const projectData = [
   {
-    name: "TheTipTop Jeux-concours",
-    slug: "thetiptop",
-    bannerImg: profilePic,
-    links: "https://thetiptop-jeux-concours.com/",
+    name: "Constructor: Real Estate",
+    image: "https://i.ibb.co/1JKBNQVv/real-estate.png",
+    links: "https://real-estate-constructor.vercel.app/",
   },
   {
-    name: "Dolphprint Chat App",
-    slug: "dolphprint-chat-app",
-    bannerImg: profilePic,
-    links: "https://commande.dolphprint.com/",
+    name: "Constructor: Real Estate",
+    image: "https://i.ibb.co/1JKBNQVv/real-estate.png",
+    links: "https://real-estate-constructor.vercel.app/",
   },
   {
-    name: "Outlook Calendar clone",
-    slug: "outlook-clone",
-    bannerImg: profilePic,
-    links: "",
+    name: "Constructor: Real Estate",
+    image: "https://i.ibb.co/1JKBNQVv/real-estate.png",
+    links: "https://real-estate-constructor.vercel.app/",
   },
   {
-    name: "Flood Alert",
-    slug: "flood-alert",
-    bannerImg: profilePic,
-    links: "",
+    name: "Constructor: Real Estate",
+    image: "https://i.ibb.co/1JKBNQVv/real-estate.png",
+    links: "https://real-estate-constructor.vercel.app/",
   },
   {
-    name: "DolphPretty",
-    slug: "dolphpretty",
-    bannerImg: profilePic,
-    links: "https://dolphpretty.com/",
+    name: "Constructor: Real Estate",
+    image: "https://i.ibb.co/1JKBNQVv/real-estate.png",
+    links: "https://real-estate-constructor.vercel.app/",
   },
 ];
 
@@ -48,13 +41,6 @@ export const projectInfo = {
       <Link href={socialLinks.github.link} target="_blank" className="textP">
         {socialLinks.github.name}
       </Link>
-      .
-      {/* <Link href={socialLinks.gitlab.link} target="_blank" className="textP">
-        {socialLinks.gitlab.name}
-      </Link>{" "} */}
-      {/* <span style={{ fontStyle: "italic" }}>
-        (Unfortunately, several enterprise projects are in private mode)
-      </span> */}
     </>
   ),
 };
