@@ -41,7 +41,7 @@ const certifications: { title: string; link: string; image: string }[] = [
       "https://i.ibb.co/KxjQvsRW/coursera-configuration-management-and-cloud.png",
   },
   {
-    title: "Google IT Automation with Python by Google",
+    title: "Google IT Automation with Python",
     link: "https://www.credly.com/go/yvtuplTu",
     image: "https://i.ibb.co/LXb47928/Screen-Shot-2025-02-13-at-6-16-43-PM.png",
   },
