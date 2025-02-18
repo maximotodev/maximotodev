@@ -14,9 +14,9 @@ export const projectData = [
     links: "https://miareynolds.vercel.app/",
   },
   {
-    name: "Constructor Real State",
-    image: "https://i.ibb.co/1JKBNQVv/real-estate.png",
-    links: "https://real-estate-constructor.vercel.app/",
+    name: "Alyssa Grey",
+    image: "https://i.ibb.co/1fzJGDQm/Screen-Shot-2025-02-17-at-8-14-01-PM.png",
+    links: "https://alyssagrey-dev.vercel.app/",
   },
   {
     name: "Constructor Real State",
