@@ -5,6 +5,16 @@ import Image from "next/image";
 
 const certifications: { title: string; link: string; image: string }[] = [
   {
+    title: "Google IT Automation with Python",
+    link: "https://www.credly.com/go/yvtuplTu",
+    image: "https://i.ibb.co/LXb47928/Screen-Shot-2025-02-13-at-6-16-43-PM.png",
+  },
+  {
+    title: "Google AI Essentials",
+    link: "https://www.coursera.org/verify/JFHTU7CWBPSP",
+    image: "https://i.ibb.co/chBQS6TH/coursera-google-AI-Essentials.png",
+  },
+  {
     title: "Introduction to Back-End Development",
     link: "https://www.coursera.org/verify/CLX29DGQ9THH",
     image: "https://i.ibb.co/jknM2xwn/coursera-into-backend-dev.png",
@@ -25,25 +35,10 @@ const certifications: { title: string; link: string; image: string }[] = [
     image: "https://i.ibb.co/77QRNw0/scrimba-frontend-career-path.png",
   },
   {
-    title: "Introduction to Git and GitHub",
-    link: "https://coursera.org/verify/8MK2IL9X22S6",
-    image: "https://i.ibb.co/YBHzDMwm/coursera-intro-git-github.png",
-  },
-  {
-    title: "Troubleshooting and Debugging Techniques",
-    link: "https://coursera.org/verify/LHZ8ZWXK3NCH",
-    image: "https://i.ibb.co/Pz6t9VTD/coursera-troubleshooting-debugging.png",
-  },
-  {
     title: "Configuration Management and the Cloud",
     link: "https://coursera.org/verify/OEYQ6UYY3SUN",
     image:
       "https://i.ibb.co/KxjQvsRW/coursera-configuration-management-and-cloud.png",
-  },
-  {
-    title: "Google IT Automation with Python",
-    link: "https://www.credly.com/go/yvtuplTu",
-    image: "https://i.ibb.co/LXb47928/Screen-Shot-2025-02-13-at-6-16-43-PM.png",
   },
 ];
 const Certifications = () => {
