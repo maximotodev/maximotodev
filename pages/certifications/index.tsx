@@ -15,15 +15,15 @@ const certifications: { title: string; link: string; image: string }[] = [
     image: "https://i.ibb.co/chBQS6TH/coursera-google-AI-Essentials.png",
   },
   {
-    title: "Introduction to Back-End Development",
+    title: "Meta Back-End Development",
     link: "https://www.coursera.org/verify/CLX29DGQ9THH",
     image: "https://i.ibb.co/jknM2xwn/coursera-into-backend-dev.png",
   },
-  {
-    title: "Crash Course on Python",
-    link: "https://coursera.org/verify/TMMVEO43MWBB",
-    image: "https://i.ibb.co/Kcj7WYKc/coursera-python-crash-course.png",
-  },
+  // {
+  //   title: "Crash Course on Python",
+  //   link: "https://coursera.org/verify/TMMVEO43MWBB",
+  //   image: "https://i.ibb.co/Kcj7WYKc/coursera-python-crash-course.png",
+  // },
   {
     title: "Using Python to Interact with the OS",
     link: "https://coursera.org/verify/H15WGEBT3CJ8",
