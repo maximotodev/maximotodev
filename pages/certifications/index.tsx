@@ -25,9 +25,9 @@ const certifications: { title: string; link: string; image: string }[] = [
   //   image: "https://i.ibb.co/Kcj7WYKc/coursera-python-crash-course.png",
   // },
   {
-    title: "Using Python to Interact with the OS",
-    link: "https://coursera.org/verify/H15WGEBT3CJ8",
-    image: "https://i.ibb.co/3DDPCCv/coursera-python-to-interact-with-os.png",
+    title: "Foundations of Cybersecurity",
+    link: "https://coursera.org/verify/ZN1EIMJNCU46",
+    image: "https://i.ibb.co/B56py6YT/google-cybersecurity.png",
   },
   {
     title: "The Frontend Developer Career Path",
