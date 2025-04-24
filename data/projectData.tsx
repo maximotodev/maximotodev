@@ -24,9 +24,9 @@ export const projectData = [
     links: "https://real-estate-constructor.vercel.app/",
   },
   {
-    name: "Constructor Real State",
-    image: "https://i.ibb.co/1JKBNQVv/real-estate.png",
-    links: "https://real-estate-constructor.vercel.app/",
+    name: "Bitcoin Chatbot",
+    image: "https://i.ibb.co/Kc22Gzmv/bitcoin-chatbot.png",
+    links: "https://bitcoin-chatbot.netlify.app/",
   },
 ];
 
