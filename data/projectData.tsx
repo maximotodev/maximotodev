@@ -14,9 +14,10 @@ export const projectData = [
     links: "https://miareynolds.vercel.app/",
   },
   {
-    name: "Alyssa Grey",
-    image: "https://i.ibb.co/1fzJGDQm/Screen-Shot-2025-02-17-at-8-14-01-PM.png",
-    links: "https://alyssagrey-dev.vercel.app/",
+    name: "Gemini Quest",
+    image:
+      "https://i.ibb.co/N2Z79Rvs/Screen-Shot-2025-06-11-at-12-46-24-PM.png",
+    links: "https://gemini-quest.netlify.app/",
   },
   {
     name: "Constructor Real State",
