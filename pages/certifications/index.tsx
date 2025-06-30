@@ -19,15 +19,10 @@ const certifications: { title: string; link: string; image: string }[] = [
     link: "https://www.coursera.org/verify/CLX29DGQ9THH",
     image: "https://i.ibb.co/jknM2xwn/coursera-into-backend-dev.png",
   },
-  // {
-  //   title: "Crash Course on Python",
-  //   link: "https://coursera.org/verify/TMMVEO43MWBB",
-  //   image: "https://i.ibb.co/Kcj7WYKc/coursera-python-crash-course.png",
-  // },
   {
-    title: "Foundations of Cybersecurity",
-    link: "https://coursera.org/verify/ZN1EIMJNCU46",
-    image: "https://i.ibb.co/B56py6YT/google-cybersecurity.png",
+    title: "Linux and SQL",
+    link: "https://coursera.org/verify/Z85DMG59FUN5",
+    image: "https://i.ibb.co/39Wjkrkq/Screen-Shot-2025-06-30-at-7-07-29-PM.png",
   },
   {
     title: "The Frontend Developer Career Path",
