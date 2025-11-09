@@ -1,4 +1,4 @@
-# 👋 Hey, I'm Maximoto!
+# 👋 Hey, I'm Diego!
 
 I'm a **self-taught Full-Stack Developer** passionate about building open-source applications that blend **AI, Bitcoin, and the web**.  
 I love creating meaningful software that empowers users, promotes decentralization, and connects technology with real-world impact.
