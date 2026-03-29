@@ -53,7 +53,7 @@ My goal is not just to ship quickly, but to build systems that remain coherent u
 ## Links
 
 - Portfolio: https://maximotodev.vercel.app
-- LinkedIn: https://www.linkedin.com/in/diego-aguero-zavala-14a2b534b/
+- Primal: https://primal.net/p/nprofile1qqsd2twjl8axqlnsmeh8h28tnj3wneel6dx7epz4tav4dj7rrxtpd8gnudt2k
 - GitHub: https://github.com/maximotodev
 - SatsRover: https://sats-rover.vercel.app
 
