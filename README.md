@@ -1,62 +1,48 @@
-# Diego Agüero-Zavala
+# Maximoto
 
-AI-native full-stack engineer building products where trust boundaries, incentives, and protocol design matter.
+**AI/ML · Bitcoin · Nostr · FIPS · FOSS**
 
-I work across product, systems, and implementation with a focus on Bitcoin, Nostr, decentralized applications, and AI-assisted software delivery.
+I'm an open-source developer and maintainer building sovereign, protocol-aware applications. I work across architecture, security review, full-stack engineering, and AI-assisted development—with a focus on systems people can inspect, verify, and control.
 
-## What I’m focused on
+## What I'm focused on
 
-- Bitcoin and Lightning-native product development
-- Nostr and decentralized protocol-driven applications
-- React / Next.js / TypeScript frontend systems
-- Python backend systems and APIs
-- AI-native engineering with human-owned architecture and correctness
+- **AI/ML:** practical AI engineering, multi-agent coding workflows, automated testing, and human-reviewed security audits.
+- **Bitcoin:** Lightning, Cashu ecash, wallet integration, and Bitcoin-native marketplaces.
+- **Nostr:** open protocols, NIP-17 private messaging, portable identity, and decentralized applications.
+- **FIPS:** public-mesh networking and decentralized coordination using [FIPS](https://github.com/jmcorgan/fips), including experimental auction validator infrastructure.
+- **FOSS:** maintainable open-source software, reproducible tests, security-first architecture, and contributor-friendly documentation.
 
-## Featured work
+## Featured work: Plebeian Apps
 
-### SatsRover
-A sovereign coordination platform for the Bitcoin economy combining map-based UX, cryptographic verification, and protocol-aware backend design.
+I contribute to [Plebeian Market](https://github.com/PlebeianApp/market), a Bitcoin- and Nostr-native marketplace, through implementation, architecture, testing, DevOps, and adversarial review.
 
-**Stack:** Next.js, TypeScript, FastAPI, Python, Postgres/PostGIS  
-**Focus:** trust boundaries, verifiable signals, Bitcoin-native coordination, production system design
+Current engineering areas include decentralized auctions, CometBFT/PBTS validator consensus, Cashu/Coco wallet integration, Nostr messaging, and reliable deployment paths. The auction validator/FIPS work is experimental; I don't present it as a production deployment.
 
-### Plebeian Market contributions
-Frontend and architecture contributions to a Bitcoin- and Nostr-native marketplace.
+### Selected proof of work
 
-**Focus:** payment flows, wallet UX, protocol-safe product work, query/data flow, frontend reliability
+| Area | Public evidence | Status |
+| --- | --- | --- |
+| Decentralized auction consensus | [Four-validator, 3-of-4 BFT design (#1407)](https://github.com/PlebeianApp/market/pull/1407) · [Accepted ADR (#1409)](https://github.com/PlebeianApp/market/pull/1409) · [Anti-sniping soft-close rule (#1411)](https://github.com/PlebeianApp/market/pull/1411) | Merged |
+| Private Nostr order messaging | [NIP-17 message boundary (#1095)](https://github.com/PlebeianApp/market/pull/1095) · [Transport boundary (#1110)](https://github.com/PlebeianApp/market/pull/1110) · [Read integration (#1136)](https://github.com/PlebeianApp/market/pull/1136) | Merged |
+| Security and privacy | [Private auction claims and custody recovery (#1015)](https://github.com/PlebeianApp/market/pull/1015) · [Default-deny server bootstrap (#1227)](https://github.com/PlebeianApp/market/pull/1227) | Merged |
+| Deployment and operations | [Release package dependency patches (#1410)](https://github.com/PlebeianApp/market/pull/1410) · [Relay pruning runbook (#1140)](https://github.com/PlebeianApp/market/pull/1140) | Merged |
+| Wallet and auction lifecycle | [Coco v2 wallet integration (#1387)](https://github.com/PlebeianApp/market/pull/1387) | Open PR · in progress |
+| Marketplace product reliability | [Product variation and inherited image fixes (#1424)](https://github.com/PlebeianApp/market/pull/1424) | Open PR · in review |
 
-### Sovereign Portfolio
-My portfolio site and public product surface for showcasing projects, architecture, and engineering direction.
+More contributions: [Plebeian Market pull requests by maximotodev](https://github.com/PlebeianApp/market/pulls?q=author%3Amaximotodev).
 
-**Stack:** Next.js, TypeScript, Tailwind CSS
+## Other projects
+
+- **[SatsRover](https://sats-rover.vercel.app)** — exploration of Bitcoin-native local discovery and sovereign coordination.
+- **[Portfolio](https://maximotodev.vercel.app)** — projects, experiments, and engineering work.
 
 ## How I work
 
-I use AI tools to accelerate delivery, but I keep ownership of:
-
-- architecture
-- system boundaries
-- security-sensitive flows
-- correctness on critical paths
-- business and product alignment
-
-My goal is not just to ship quickly, but to build systems that remain coherent under real constraints.
-
-## Current interests
-
-- Bitcoin payments and circular economies
-- Nostr protocol design and implementation
-- AI-native engineering workflows
-- Verification systems and incentive-aware product design
-- Open-source product development
+I use AI agents to accelerate research, implementation, testing, and review, while keeping architecture, security-sensitive decisions, and release approval under human control. I value small reviewable changes, explicit trust boundaries, and verifiable evidence over untested claims.
 
 ## Links
 
-- Portfolio: https://maximotodev.vercel.app
-- Primal: https://primal.net/p/nprofile1qqsd2twjl8axqlnsmeh8h28tnj3wneel6dx7epz4tav4dj7rrxtpd8gnudt2k
-- GitHub: https://github.com/maximotodev
-- SatsRover: https://sats-rover.vercel.app
-
-## Let’s build
-
-I’m especially interested in working on products that combine strong UX with protocol-aware architecture, especially in Bitcoin, Nostr, AI, and sovereign web systems.
+- **Nostr / npub:** [`npub165ka9706vpl8phnw0w5wh89za8nnl56dajz92h6e2m9uxxvkz6wszt0gn5`](https://primal.net/p/nprofile1qqsd2twjl8axqlnsmeh8h28tnj3wneel6dx7epz4tav4dj7rrxtpd8gnudt2k)
+- **ngit / GitWorkshop:** [Nostr identity on GitWorkshop](https://gitworkshop.dev/npub165ka9706vpl8phnw0w5wh89za8nnl56dajz92h6e2m9uxxvkz6wszt0gn5)
+- **GitHub:** [@maximotodev](https://github.com/maximotodev)
+- **Portfolio:** [maximotodev.vercel.app](https://maximotodev.vercel.app)
