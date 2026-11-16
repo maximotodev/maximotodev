@@ -4,23 +4,22 @@
 
 I'm an independent, self-taught full-stack engineer building practical software where open protocols, payments, and AI meet. I enjoy taking a loosely defined problem from prototype to working product: TypeScript/React on the frontend, Python and Node.js services behind it, and testing, observability, and security at the boundaries.
 
-**[Portfolio & system-design case studies](https://maximotodev.vercel.app/systems)** · **[Selected contributions](https://github.com/PlebeianApp/market/pulls?q=author%3Amaximotodev)** · **[SatsRover source](https://github.com/maximotodev/sats-rover)**
+**[Portfolio & system-design case studies](https://maximotodev.vercel.app/systems)** · **[SatsRover source](https://github.com/maximotodev/sats-rover)** · **[Sovereign Portfolio source](https://github.com/maximotodev/sovereign-portfolio)**
 
 ## Start here — evidence in 60 seconds
 
 | What to inspect | Why it matters | Evidence |
 | --- | --- | --- |
-| **An architectural decision** | Proposed four equal-power validators, 3-of-4 BFT finality, and explicit consensus vs. Nostr transport boundaries for experimental auctions | [Architecture PR #1407](https://github.com/PlebeianApp/market/pull/1407) · [Accepted ADR #1409](https://github.com/PlebeianApp/market/pull/1409) · **merged** |
-| **A production release fix** | Corrected missing dependency patches in build/release packages after a staging failure | [Deployment PR #1410](https://github.com/PlebeianApp/market/pull/1410) · **merged** |
-| **A protocol integration boundary** | Added tested, narrowly scoped NIP-17 order-message transport and read helpers before live checkout integration | [Boundary PR #1095](https://github.com/PlebeianApp/market/pull/1095) · [Transport PR #1110](https://github.com/PlebeianApp/market/pull/1110) · [Read helper PR #1136](https://github.com/PlebeianApp/market/pull/1136) · **merged** |
-| **A deployed-style system architecture** | Client-signed Nostr writes, indexer-backed canonical event truth, API read models, Redis as non-authoritative cache | [SatsRover repo](https://github.com/maximotodev/sats-rover) · [architecture](https://github.com/maximotodev/sats-rover/blob/main/docs/architecture.md) · **prototype** |
-| **A security review made concrete** | Protected private auction claims and constrained custody/reclaim behavior | [Security PR #1015](https://github.com/PlebeianApp/market/pull/1015) · **merged** |
+| **A deployed-style system architecture** | Client-signed Nostr writes, indexer-backed canonical event truth, API read models, and Redis as non-authoritative cache | [SatsRover repo](https://github.com/maximotodev/sats-rover) · [architecture](https://github.com/maximotodev/sats-rover/blob/main/docs/architecture.md) · **prototype** |
+| **Operational release boundaries** | Documents build, deployment, rollback, verification, and human-approval boundaries for a public Next.js portfolio | [Sovereign Portfolio repo](https://github.com/maximotodev/sovereign-portfolio) · [engineering runbook](https://github.com/maximotodev/sovereign-portfolio/blob/main/docs/SOVEREIGN_PORTFOLIO_RUNBOOK.md) |
+| **Human-controlled Nostr publishing** | Keeps content review and signing under explicit human control while separating preparation from publication | [Publishing implementation](https://github.com/maximotodev/sovereign-portfolio/blob/main/src/lib/nostr-publishing.ts) |
+| **A privacy-aware Nostr tool** | Demonstrates a focused Nostr notification workflow with its implementation and limitations available for review | [Nostr Notifier](https://github.com/maximotodev/Nostr-Notifier) |
 
 ## Work in progress — clearly labeled
 
-- **[Plebeian Market](https://github.com/PlebeianApp/market):** decentralized commerce, Nostr messaging, auction protocol design, Cashu/Coco wallet workflows, safety checks, and release infrastructure. [Coco v2 integration PR #1387](https://github.com/PlebeianApp/market/pull/1387) and [product variations PR #1424](https://github.com/PlebeianApp/market/pull/1424) remain **open / in review**; they are not presented as merged or production-ready.
 - **[SatsRover](https://github.com/maximotodev/sats-rover):** Bitcoin merchant discovery and Nostr check-ins. Next.js + FastAPI + PostgreSQL/PostGIS + Redis + indexer. [Current implementation boundaries](https://github.com/maximotodev/sats-rover/blob/main/README.md).
 - **[Sovereign Portfolio / Newstr](https://github.com/maximotodev/sovereign-portfolio):** Next.js portfolio, source-linked [Systems Lab](https://maximotodev.vercel.app/systems), and signed Nostr writing experiments. [Site](https://maximotodev.vercel.app) · [engineering runbook](https://github.com/maximotodev/sovereign-portfolio/blob/main/docs/SOVEREIGN_PORTFOLIO_RUNBOOK.md).
+- **[Nostr Notifier](https://github.com/maximotodev/Nostr-Notifier):** a small Nostr-native notification project with public source and documented setup.
 
 ## AI engineering approach
 
